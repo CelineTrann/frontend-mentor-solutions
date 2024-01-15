@@ -1,0 +1,112 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('assets\\fonts\\WorkSans-VariableFont_wght.ttf');
+    font-weight: 400 600 700;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-color: var(--light-pink);
+    font-size: 16px;
+    font-family: 'Work Sans', Helvetica, sans-serif;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-header {
+    width: 100%;
+    height: 30%;
+    background-image: url('assets\\images\\background-pattern-mobile.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.content {
+    background-color: var(--white);
+    margin: 0 1.5rem;
+    padding: 1.5rem;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.header {
+    display: flex;
+    gap: 0.5rem;
+}
+
+h1 {    
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.accordion {
+    border-bottom: 1px solid var(--light-pink);
+    padding: 1rem 0;
+}
+
+.accordion:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark-purple);
+}
+
+h2:hover {
+    color: var(--grayish-purple);
+    cursor: pointer;
+}
+
+.button {
+    padding-left: 1rem;
+}
+
+.answer {
+    display: none;
+}
+
+p {
+    padding-top: 1rem;
+    font-weight: 400;
+    color: var(--grayish-purple);
+}
+
+@media only screen and (min-width: 1440px)  {
+    .content {
+        width: 40%;
+        padding: 2rem;
+    }
+}
