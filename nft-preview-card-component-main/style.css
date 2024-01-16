@@ -112,3 +112,11 @@ p {
 .creator span {
     color: var(--white);
 }
+
+@media only screen and (min-width: 1440px) {
+    .content {
+        width: 20%;
+        margin: 0 1.5rem;
+        padding: 1.5rem;
+    }
+}
