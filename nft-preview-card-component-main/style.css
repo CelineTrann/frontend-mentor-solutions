@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--main-bg);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: var(--card-bg);
+    margin: 0 1.2rem;
+    padding: 1.2rem;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nft-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+h1 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+h1, .creator span {
+    transition: color 0.5s ease;
+}
+
+h1:hover, .creator span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+p {
+    color: var(--soft-blue);
+    font-weight: 300;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    font-weight: 400;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1rem;
+}
+
+.info img {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
+.info p {
+    padding-left: 5px;
+}
+
+.cost {
+    display: flex;
+    align-items: center;
+}
+
+.cost p {
+    color: var(--cyan);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.creator img {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.creator span {
+    color: var(--white);
+}
+
+@media only screen and (min-width: 1440px) {
+    .content {
+        width: 20%;
+        margin: 0 1.5rem;
+        padding: 1.5rem;
+    }
+}
