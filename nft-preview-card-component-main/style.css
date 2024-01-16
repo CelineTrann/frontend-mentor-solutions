@@ -55,6 +55,15 @@ h1 {
     font-size: 1.5rem;
 }
 
+h1, .creator span {
+    transition: color 0.5s ease;
+}
+
+h1:hover, .creator span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
 p {
     color: var(--soft-blue);
     font-weight: 300;
