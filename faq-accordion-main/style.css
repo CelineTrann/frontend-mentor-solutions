@@ -74,15 +74,17 @@ h1::before {
 }
 
 .question {
-    font-weight: 600;
-    font-size: 1rem;
-    color: var(--dark-purple);
     border-top: 1px solid var(--light-pink);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+}
+
+.question h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--dark-purple);
 }
 
 .question:first-child {
