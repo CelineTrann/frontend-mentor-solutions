@@ -1,0 +1,35 @@
+@font-face {
+    font-family: Roboto-Bold;
+    src: url('assets\\fonts\\Roboto-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('assets\\fonts\\Roboto-Regular.ttf');
+    font-weight: 400;
+}
+
+:root {
+    /* Primary */
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family:'Roboto-Regular', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
