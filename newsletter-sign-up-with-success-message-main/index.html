@@ -17,36 +17,34 @@
 <body>
 
   <!-- Sign-up form start -->
-
-  Stay updated!
-
-  Join 60,000+ product managers receiving monthly updates on:
-
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
+  <main>
+    <h1>Stay updated!</h1>
+    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+    <ul>
+      <li>Product discovery and building what matters</li>
+      <li>Measuring to ensure updates are a success</li>
+      <li>And much more!</li>
+    </ul>
+    <form action="" method="post">
+      <label for="email">Email address</label>
+      <input type="email" name="email" id="email-input" placeholder="email@company.com">
+      <button type="submit">Subscribe to monthly newsletter</button>
+    </form>
+  </main>
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
-
-  Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message
-
+  <div id="success-message" class="message">
+    <h1>Thanks for subscribing!</h1>
+    <p>A confirmation email has been sent to <em>ash@loremcompany.com</em>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+    <button type="button">Dismiss message</button>
+  </div>
   <!-- Success message end -->
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    Coded by <a href="https://github.com/CelineTrann">Celine Tran</a>.
+  </footer>
 </body>
 </html>
