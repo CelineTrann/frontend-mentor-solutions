@@ -64,13 +64,15 @@ ul {
 
 ul li {
     position: relative;
-    padding-left: 1em;
+    padding-left: 2.2em;
+    margin: 1rem 0;
 }
 
 ul li::before {
     content: url('assets\\images\\icon-list.svg');
-    width: 1em;
-    padding-right: 1em;
+    width: 21px;
+    height: 21px;
+    
     position: absolute;
     left: 0;
     top: -0.2em;
@@ -79,6 +81,7 @@ ul li::before {
 form {
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
 }
 
 label {
