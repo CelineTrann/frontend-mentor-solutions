@@ -184,6 +184,10 @@ main {
         font-size: 3.7rem;
     }
 
+    button:hover {
+        background-color: var(--tomato);
+    }
+
     /* Main */
     .main-container {
         width: 50%;
