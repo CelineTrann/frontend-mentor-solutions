@@ -1,0 +1,259 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('assets\\fonts\\Roboto-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('assets\\fonts\\Roboto-Regular.ttf');
+    font-weight: 400;
+}
+
+:root {
+    /* Primary */
+    --tomato: hsl(4, 100%, 67%);
+    --dark-slate-grey: hsl(234, 29%, 20%);
+    --charcoal-grey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+
+}
+
+/* Reset Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+input, button {
+    all: unset;
+}
+
+/* Generic */
+body {
+    font-family:'Roboto-Regular', Arial, sans-serif;
+    font-size: 16px;
+    width: 100vw;
+    height: 100%;
+}
+
+h1 {
+    font-size: 2.1rem;
+    font-family: 'Roboto-Bold';
+    color: var(--dark-slate-grey);
+}
+
+p, ul {
+    color: var(--charcoal-grey);
+}
+
+ul {
+    list-style: none;
+}
+
+
+ul li {
+    position: relative;
+    padding-left: 2.2em;
+    margin: 1rem 0;
+}
+
+ul li::before {
+    content: url('assets\\images\\icon-list.svg');
+    width: 21px;
+    height: 21px;
+    
+    position: absolute;
+    left: 0;
+    top: -0.2em;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+label {
+    font-size: 0.7rem;
+    font-family: 'Roboto-Bold';
+    color: var(--dark-slate-grey);
+}
+
+input[type=email] {
+    padding: 1rem;
+    border: 1px solid var(--grey);
+    border-radius: 10px;
+}
+
+button {
+    font-family: 'Roboto-Bold';
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--dark-slate-grey);
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Main */
+main {
+    width: 100%;
+    height: 100vh;
+}
+
+.main-container {
+    display: none;
+}
+
+.main-active {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-img {
+    display: block;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.content, form {
+    gap: 1rem;
+}
+
+/* Success Message */
+.success-message-containter {
+    display: none;
+}
+
+.active {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.success-message-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.success-message-content img {
+    width: 4rem;
+    height: 4rem;
+    margin: 4rem 0 1rem 0;
+}
+
+.success-message-content button {
+    margin-top: auto;
+}
+
+/* Shared State */
+.success-message-containter, .main-container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white);
+}
+
+/* Media Query */
+@media only screen and (min-width: 1440px) {
+    /* Generic */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark-slate-grey);
+    }
+
+    h1 {
+        font-size: 3.7rem;
+    }
+
+    button:hover {
+        background-color: var(--tomato);
+    }
+
+    /* Main */
+    .main-container {
+        width: 50%;
+        height: 70%;
+        border-radius: 20px;
+        padding: 2rem;
+    }
+
+    .main-active {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        display: block;
+    }
+
+    .content {
+        padding: 2rem 1rem;
+    }
+
+    /* Success Message */
+    .active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark-slate-grey);
+    }
+
+    .success-message-content {
+        width: 27%;
+        height: 60%;
+        padding: 4rem;
+        background-color: var(--white);
+        border-radius: 20px;
+    }
+
+    .success-message-content img {
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem 0;
+    }
+}
