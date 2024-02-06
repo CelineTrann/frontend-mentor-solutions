@@ -104,6 +104,7 @@ button {
     padding: 1rem;
     border-radius: 10px;
     text-align: center;
+    cursor: pointer;
 }
 
 /* Main */
@@ -133,7 +134,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 4rem 2rem;
+    padding: 2rem;
 
 
     position: absolute;

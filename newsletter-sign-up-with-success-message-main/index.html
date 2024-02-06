@@ -37,22 +37,22 @@
         <li>Measuring to ensure updates are a success</li>
         <li>And much more!</li>
       </ul>
-      <form action="" method="post">
+      <form action="/" method="post" id="email-submit-form">
         <label for="email">Email address</label>
         <input type="email" name="email" id="email-input" placeholder="email@company.com">
-        <button type="submit">Subscribe to monthly newsletter</button>
+        <button type="submit" id="email-submit-btm">Subscribe to monthly newsletter</button>
       </form>
     </div>
   </main>
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
-  <div id="success-message" class="success-message-containter active">
+  <div id="success-message" class="success-message-containter">
     <img src="assets\images\icon-success.svg" alt="checkmark icon" >
     <h1>Thanks for subscribing!</h1>
     <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>.
       Please open it and click the button inside to confirm your subscription.</p>
-    <button type="button">Dismiss message</button>
+    <button type="button" id="dismiss-msg-btn">Dismiss message</button>
   </div>
   <!-- Success message end -->
 
@@ -60,6 +60,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://github.com/CelineTrann">Celine Tran</a>.
   </footer>
+
+  <script src="index.js"></script>
 </body>
 
 </html>
