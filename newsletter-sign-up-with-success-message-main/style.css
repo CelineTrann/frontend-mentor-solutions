@@ -110,7 +110,14 @@ button {
 /* Main */
 main {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+}
+
+.main-container {
+    display: none;
+}
+
+.main-active {
     display: flex;
     flex-direction: column;
 }
@@ -141,9 +148,6 @@ main {
 .active {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    padding: 2rem;
-
 
     position: absolute;
     top: 0;
@@ -151,13 +155,23 @@ main {
     z-index: 10;
 }
 
-.success-message-containter img {
+.success-message-content {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.success-message-content img {
     width: 4rem;
     height: 4rem;
     margin: 4rem 0 1rem 0;
 }
 
-.success-message-containter button {
+.success-message-content button {
     margin-top: auto;
 }
 
@@ -171,6 +185,13 @@ main {
 /* Media Query */
 @media only screen and (min-width: 1440px) {
     /* Generic */
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     main {
         width: 100vw;
         height: 100vh;
@@ -192,10 +213,13 @@ main {
     .main-container {
         width: 50%;
         height: 70%;
-        display: flex;
-        flex-direction: row-reverse;
         border-radius: 20px;
         padding: 2rem;
+    }
+
+    .main-active {
+        display: flex;
+        flex-direction: row-reverse;
     }
 
     .mobile-img {
@@ -211,4 +235,25 @@ main {
     }
 
     /* Success Message */
+    .active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--dark-slate-grey);
+    }
+
+    .success-message-content {
+        width: 27%;
+        height: 60%;
+        padding: 4rem;
+        background-color: var(--white);
+        border-radius: 20px;
+    }
+
+    .success-message-content img {
+        width: 4rem;
+        height: 4rem;
+        margin: 1rem 0;
+    }
 }

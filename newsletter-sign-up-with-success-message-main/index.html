@@ -27,7 +27,7 @@
 <body>
   <!-- Sign-up form start -->
   <main>
-    <div class="main-container">
+    <div class="main-container main-active">
       <img class="mobile-img" src="assets\images\illustration-sign-up-mobile.svg"
         alt="A red and orange image with a browser">
       <img class="desktop-img" src="assets\images\illustration-sign-up-desktop.svg"
@@ -52,11 +52,13 @@
 
   <!-- Success message start -->
   <div id="success-message" class="success-message-containter">
-    <img src="assets\images\icon-success.svg" alt="checkmark icon">
-    <h1>Thanks for subscribing!</h1>
-    <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>.
-      Please open it and click the button inside to confirm your subscription.</p>
-    <button type="button" id="dismiss-msg-btn">Dismiss message</button>
+    <div class="success-message-content">
+      <img src="assets\images\icon-success.svg" alt="checkmark icon">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>.
+        Please open it and click the button inside to confirm your subscription.</p>
+      <button type="button" id="dismiss-msg-btn">Dismiss message</button>
+    </div>
   </div>
   <!-- Success message end -->
 
