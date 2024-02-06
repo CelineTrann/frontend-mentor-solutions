@@ -211,7 +211,7 @@ main {
 
     /* Main */
     .main-container {
-        width: 50%;
+        width: 65%;
         height: 70%;
         border-radius: 20px;
         padding: 2rem;
@@ -244,7 +244,7 @@ main {
     }
 
     .success-message-content {
-        width: 27%;
+        width: 40%;
         height: 60%;
         padding: 4rem;
         background-color: var(--white);
