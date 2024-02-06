@@ -130,11 +130,26 @@ main {
 }
 
 .active {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 4rem 2rem;
+
+
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
+}
+
+.success-message-containter img {
+    width: 4rem;
+    height: 4rem;
+    margin: 4rem 0 1rem 0;
+}
+
+.success-message-containter button {
+    margin-top: auto;
 }
 
 /* Shared State */
