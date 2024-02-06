@@ -25,30 +25,34 @@
 </head>
 
 <body>
-
   <!-- Sign-up form start -->
   <main>
-    <img src="assets\images\illustration-sign-up-mobile.svg" alt="A red and orange image with a browser">
-    <div class="content" id="main-content">
-      <h1>Stay updated!</h1>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul>
-        <li>Product discovery and building what matters</li>
-        <li>Measuring to ensure updates are a success</li>
-        <li>And much more!</li>
-      </ul>
-      <form action="/" method="post" id="email-submit-form">
-        <label for="email">Email address</label>
-        <input type="email" name="email" id="email-input" placeholder="email@company.com">
-        <button type="submit" id="email-submit-btm">Subscribe to monthly newsletter</button>
-      </form>
+    <div class="main-container">
+      <img class="mobile-img" src="assets\images\illustration-sign-up-mobile.svg"
+        alt="A red and orange image with a browser">
+      <img class="desktop-img" src="assets\images\illustration-sign-up-desktop.svg"
+        alt="A red and orange image with a browser">
+      <div class="content" id="main-content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <form action="/" method="post" id="email-submit-form">
+          <label for="email">Email address</label>
+          <input type="email" name="email" id="email-input" placeholder="email@company.com">
+          <button type="submit" id="email-submit-btm">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
     </div>
   </main>
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
   <div id="success-message" class="success-message-containter">
-    <img src="assets\images\icon-success.svg" alt="checkmark icon" >
+    <img src="assets\images\icon-success.svg" alt="checkmark icon">
     <h1>Thanks for subscribing!</h1>
     <p>A confirmation email has been sent to <b>ash@loremcompany.com</b>.
       Please open it and click the button inside to confirm your subscription.</p>
