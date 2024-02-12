@@ -1,0 +1,56 @@
+/* Variables */
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("assets\\fonts\\Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-BoldItalic";
+    src: url("assets\\fonts\\Poppins-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBold";
+    src: url("assets\\fonts\\Poppins-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-ExtraBoldItalic";
+    src: url("assets\\fonts\\Poppins-ExtraBoldItalic.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url("assets\\fonts\\Poppins-Italic.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("assets\\fonts\\Poppins-Regular.ttf");
+}
+
+:root {
+    --purple: hsl(259, 100%, 65%);
+    --light-red: hsl(0, 100%, 67%);
+    --white: hsl(0, 0%, 100%);
+    --off-white: hsl(0, 0%, 94%);
+    --light-grey: hsl(0, 0%, 86%);
+    --smokey-grey: hsl(0, 1%, 44%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+
+/* Reset Styling */
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+/* General Components */
+body {
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-size: 32px;
+}
