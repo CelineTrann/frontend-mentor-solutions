@@ -1,37 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Age calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <main>
+    <div class="content">
+      <form action="">
+        <div class="input-group">
+          <label for="day-input">Day</label>
+          <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="day" id="day-input" placeholder="DD" maxlength="2">
+        </div>
+        <div class="input-group">
+          <label for="month-input">Month</label>
+          <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="month" id="month-input" placeholder="MM" maxlength="2">
+        </div>
+        <div class="input-group">
+          <label for="year-input">Year</label>
+          <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="year" id="year-input" placeholder="YYYY" maxlength="4">
+        </div>
+        <input type="submit" value="">
+      </form>
+      <p id="years"><span>----</span> years</p>
+      <p id="months"><span>--</span> months</p>
+      <p id="days"><span>--</span> days</p>
+    </div>
+  </main>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
+
 </html>
