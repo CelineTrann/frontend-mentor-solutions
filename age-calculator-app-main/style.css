@@ -53,4 +53,61 @@
 body {
     font-family: "Poppins", Arial, Helvetica, sans-serif;
     font-size: 32px;
+    background-color: var(--off-white);
 }
+
+main {
+    width: 100vw;
+    height: 100vh;
+}
+
+.content {
+    height: 60%;
+    background-color: var(--white);
+    margin: 5rem 1rem;
+    padding: 1.5rem;
+    border-radius: 20px 20px 100px 20px;
+}
+
+/* Inputs */
+.date-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-family: "Poppins-Bold";
+    color: var(--smokey-grey);
+}
+
+.input-group input[type="text"] {
+    font-size: 1rem;
+    font-family: "Poppins-Bold";
+    width: 100%;
+    padding: 0.7em;
+    border: 1px solid var(--light-grey);
+    border-radius: 5px;
+}
+
+.input-group input[type="submit"] {
+    width: 100%;
+    height: 0;
+}
+
+/* Results */
+p {
+    font-family: "Poppins-ExtraBoldItalic";
+}
+
+p span {
+    color: var(--purple);
+} 

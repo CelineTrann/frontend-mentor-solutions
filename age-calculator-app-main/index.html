@@ -28,17 +28,22 @@
   <main>
     <div class="content">
       <form action="">
-        <div class="input-group">
-          <label for="day-input">Day</label>
-          <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="day" id="day-input" placeholder="DD" maxlength="2">
-        </div>
-        <div class="input-group">
-          <label for="month-input">Month</label>
-          <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="month" id="month-input" placeholder="MM" maxlength="2">
-        </div>
-        <div class="input-group">
-          <label for="year-input">Year</label>
-          <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="year" id="year-input" placeholder="YYYY" maxlength="4">
+        <div class="date-input">
+          <div class="input-group">
+            <label for="day-input">Day</label>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="day" id="day-input" placeholder="DD"
+              maxlength="2" size="4">
+          </div>
+          <div class="input-group">
+            <label for="month-input">Month</label>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="month" id="month-input"
+              placeholder="MM" maxlength="2" size="4">
+          </div>
+          <div class="input-group">
+            <label for="year-input">Year</label>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="year" id="year-input"
+              placeholder="YYYY" maxlength="4" size="4">
+          </div>
         </div>
         <input type="submit" value="">
       </form>
