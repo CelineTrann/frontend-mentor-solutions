@@ -8,6 +8,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  
 
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -27,31 +28,31 @@
 <body>
   <main>
     <div class="content">
-      <form action="">
+      <form action="" id="age-calc-form">
         <div class="date-input">
           <div class="input-group">
             <label for="day-input">Day</label>
-            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="day" id="day-input" placeholder="DD"
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="day" id="day-input" class="input-text" placeholder="DD"
               maxlength="2" size="4">
           </div>
           <div class="input-group">
             <label for="month-input">Month</label>
-            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="month" id="month-input"
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="month" id="month-input" class="input-text"
               placeholder="MM" maxlength="2" size="4">
           </div>
           <div class="input-group">
             <label for="year-input">Year</label>
-            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="year" id="year-input"
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="year" id="year-input" class="input-text"
               placeholder="YYYY" maxlength="4" size="4">
           </div>
         </div>
-        <div class="submit-container">
-          <button type="submit" class="submit-btn"></button>
-        </div>
       </form>
-      <p id="years"><span>----</span> years</p>
-      <p id="months"><span>--</span> months</p>
-      <p id="days"><span>--</span> days</p>
+      <div class="submit-container">
+        <button class="submit-btn" onclick="calculateAge()"></button>
+      </div>
+      <p><span id="years">----</span> years</p>
+      <p><span id="months">--</span> months</p>
+      <p><span id="days">--</span> days</p>
     </div>
   </main>
 
@@ -59,6 +60,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Celine Tran</a>.
   </footer>
+
+  <script src="index.js"></script>
 </body>
 
 </html>

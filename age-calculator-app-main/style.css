@@ -91,7 +91,7 @@ main {
     color: var(--smokey-grey);
 }
 
-.input-group input[type="text"] {
+.input-text {
     font-size: 1rem;
     font-family: "Poppins-Bold";
     width: 100%;
@@ -148,4 +148,9 @@ p {
 
 p span {
     color: var(--purple);
+}
+
+/* Error */
+.input-error {
+    border: 1px solid var(--light-red);
 }
