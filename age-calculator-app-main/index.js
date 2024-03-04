@@ -13,9 +13,7 @@ function validateValueRange(value, minValue, maxValue) {
     return true;
 }
 
-function validateDays(day, month, year) {
-    let feb = year % 4 == 0 ? 29 : 28;
-    let validDays = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+function validateDays(day, month, validDays) {
     if (day > validDays[month]) {
         return false;
     } 
@@ -36,10 +34,10 @@ function applyError(element, isValid) {
     }
 }
 
-function validate(year, month, day) {
+function validate(year, month, day, validDays) {
     let validYear = validateValueRange(year, 0, 9999) && validateIsInPast(day, month, year);
     let validMonth = validateValueRange(month, 0, 11) && validateIsInPast(day, month, year);
-    let validDay = validateValueRange(day, 1, 31) && validateIsInPast(day, month, year) && validateDays(day, month, year);
+    let validDay = validateValueRange(day, 1, 31) && validateIsInPast(day, month, year) && validateDays(day, month, validDays);
 
     applyError(inputYear, validYear);
     applyError(inputMonth, validMonth);
@@ -51,13 +49,40 @@ function validate(year, month, day) {
 function calculateAge() {
     let [year, month, day] = [inputYear.value, inputMonth.value - 1, inputDay.value];
 
-    if (validate(year, month, day)) {
+    let feb = year % 4 == 0 ? 29 : 28;
+    let validDays = [31, feb, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+    if (validate(year, month, day, validDays)) {
         let currDate = new Date();
         let inputDate = new Date(year, month, day);
         
-    }
+        let yearDiff = currDate.getFullYear() - inputDate.getFullYear();
+        let monthDiff = currDate.getMonth() - inputDate.getMonth();
+        
+        if (monthDiff < 0) {
+            yearDiff--;
+            monthDiff += 12;
+        }
 
-    // textYear.innerHTML = inputYear.value;
-    // textMonths.innerHTML = inputMonth.value;
-    // textDays.innerHTML = inputDay.value
+        let dayDiff = currDate.getDate() - inputDate.getDate();
+        if (dayDiff < 0) {
+            if (monthDiff > 0) {
+                monthDiff--;
+            } else {
+                yearDiff--;
+                monthDiff = 11;
+            }
+            
+            dayDiff += validDays[inputDate.getMonth()];
+        }
+
+        textYear.innerHTML = yearDiff;
+        textMonths.innerHTML = monthDiff;
+        textDays.innerHTML = dayDiff;
+
+    } else {
+        textYear.innerHTML = "----";
+        textMonths.innerHTML = "--";
+        textDays.innerHTML = "--";
+    }
 }
