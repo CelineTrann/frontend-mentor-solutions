@@ -63,10 +63,11 @@ main {
 }
 
 .content {
-    height: 60%;
+    height: auto;
     background-color: var(--white);
     margin: 5rem 1rem;
     padding: 1.5rem;
+    padding-bottom: 3rem;
     border-radius: 20px 20px 100px 20px;
 }
 
@@ -144,6 +145,8 @@ main {
 /* Results */
 p {
     font-family: "Poppins-ExtraBoldItalic";
+    font-size: 3.5rem;
+    line-height: 3.5rem;
 }
 
 p span {
