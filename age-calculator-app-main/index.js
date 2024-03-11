@@ -6,6 +6,10 @@ const inputYear = document.getElementById("year-input");
 const inputMonth = document.getElementById("month-input");
 const inputDay = document.getElementById("day-input");
 
+const labelYear = document.getElementById("year-label");
+const labelMonth = document.getElementById("month-label");
+const labelDay = document.getElementById("day-label");
+
 function validateValueRange(value, minValue, maxValue) {
     if (value < minValue || value > maxValue) {
         return false;
@@ -26,11 +30,13 @@ function validateIsInPast(day, month, year) {
     return currDate > inputDate;
 }
 
-function applyError(element, isValid) {
+function applyInputError(labelElement, inputElement, isValid) {
     if (isValid) {
-        element.classList.remove("input-error");
+        labelElement.classList.remove("text-error");
+        inputElement.classList.remove("input-error");
     } else {
-        element.classList.add("input-error");
+        labelElement.classList.add("text-error");
+        inputElement.classList.add("input-error");
     }
 }
 
@@ -39,9 +45,9 @@ function validate(year, month, day, validDays) {
     let validMonth = validateValueRange(month, 0, 11) && validateIsInPast(day, month, year);
     let validDay = validateValueRange(day, 1, 31) && validateIsInPast(day, month, year) && validateDays(day, month, validDays);
 
-    applyError(inputYear, validYear);
-    applyError(inputMonth, validMonth);
-    applyError(inputDay, validDay);
+    applyInputError(labelYear, inputYear, validYear);
+    applyInputError(labelMonth, inputMonth, validMonth);
+    applyInputError(labelDay, inputDay, validDay);
 
     return validYear && validMonth && validDay;
 }

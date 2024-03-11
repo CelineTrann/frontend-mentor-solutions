@@ -85,7 +85,7 @@ main {
     flex-direction: column;
 }
 
-.input-group label {
+.input-label {
     font-size: 0.7rem;
     text-transform: uppercase;
     font-family: "Poppins-Bold";
@@ -156,6 +156,10 @@ p span {
 /* Error */
 .input-error {
     border: 1px solid var(--light-red);
+}
+
+.text-error {
+    color: var(--light-red);
 }
 
 /* Desktop Design */
