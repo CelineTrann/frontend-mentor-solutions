@@ -157,3 +157,33 @@ p span {
 .input-error {
     border: 1px solid var(--light-red);
 }
+
+/* Desktop Design */
+@media only screen and (min-width: 1440px) {
+    body {
+        font-size: 64px;
+    }
+
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        width: 35%;
+    }
+
+    .date-input {
+        justify-content: left;
+    }
+
+    .input-group {
+        width: 6rem;
+    }
+
+    .submit-container {
+        justify-content: end;
+        margin: 0;
+    }
+}
