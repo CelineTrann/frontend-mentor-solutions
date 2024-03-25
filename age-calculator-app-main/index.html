@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="content">
+      <form action="" id="age-calc-form">
+        <div class="date-input">
+          <div class="input-group">
+            <label id="day-label" class="input-label" for="day-input">Day</label>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="day" id="day-input" class="input-text" placeholder="DD"
+              maxlength="2" size="4">
+            <p class="error-msg" id="day-error">Error</p>
+          </div>
+          <div class="input-group">
+            <label id="month-label" class="input-label" for="month-input">Month</label>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="month" id="month-input" class="input-text"
+              placeholder="MM" maxlength="2" size="4">
+            <p class="error-msg" id="month-error">Error</p>
+          </div>
+          <div class="input-group">
+            <label id="year-label" class="input-label" for="year-input">Year</label>
+            <input type="text" inputmode="numeric" pattern="[0-9\s]{1,12}" name="year" id="year-input" class="input-text"
+              placeholder="YYYY" maxlength="4" size="4">
+            <p class="error-msg" id="year-error">Error</p>
+          </div>
+        </div>
+      </form>
+      <div class="submit-container">
+        <button class="submit-btn" onclick="calculateAge()"></button>
+      </div>
+      <p><span id="years">----</span> years</p>
+      <p><span id="months">--</span> months</p>
+      <p><span id="days">--</span> days</p>
+    </div>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Celine Tran</a>.
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
