@@ -145,8 +145,6 @@ main {
 /* Results */
 p {
     font-family: "Poppins-ExtraBoldItalic";
-    font-size: 3.5rem;
-    line-height: 3.5rem;
 }
 
 p span {
@@ -162,6 +160,10 @@ p span {
     color: var(--light-red);
 }
 
+.error-msg {
+    display: none;
+}
+
 /* Desktop Design */
 @media only screen and (min-width: 1440px) {
     body {
@@ -174,6 +176,11 @@ p span {
         align-items: center;
     }
 
+    p {
+        font-size: 3.5rem;
+        line-height: 3.5rem; 
+    }
+
     .content {
         width: 35%;
     }
@@ -184,6 +191,15 @@ p span {
 
     .input-group {
         width: 6rem;
+    }
+
+    .error-msg {
+        display: block;
+        font-family: "Poppins", Arial, Helvetica, sans-serif;
+        font-size: 0.7rem;
+        line-height: 0.7rem;
+        margin: 10px 0;
+        color: transparent;
     }
 
     .submit-container {
