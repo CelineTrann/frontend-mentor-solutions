@@ -10,6 +10,13 @@ const inputYear = document.getElementById("year-input");
 const inputMonth = document.getElementById("month-input");
 const inputDay = document.getElementById("day-input");
 
+function validateValueRange(value, minValue, maxValue) {
+    if (value < minValue || value > maxValue) {
+        return false;
+    }
+    return true;
+}
+
 function applyInputError(inputElement, labelElement, errorElement, isValid) {
     if (isValid) {
         labelElement.classList.remove("text-error");
@@ -28,8 +35,14 @@ function validateDay() {
 
     let isValid = true;
     if (inputDay.value == null || inputDay.value == "") {
-        errorDay.innerHTML = "This field is required";
         isValid = false;
+        errorDay.innerHTML = "This field is required";
+    } else if (day > validDays[month]) {
+        isValid = false;
+        errorDay.innerHTML = "Must be a valid date";
+    } else if (!validateValueRange(day, 1, 31)) {
+        isValid = false;
+        errorDay.innerHTML = "Must be a valid day";
     }
     
     applyInputError(inputDay, labelDay, errorDay, isValid);
@@ -42,8 +55,14 @@ function validateMonth() {
 
     let isValid = true;
     if (inputMonth.value == null || inputMonth.value == "") {
-        errorMonth.innerHTML = "This field is required";
         isValid = false;
+        errorMonth.innerHTML = "This field is required";
+    } else if (!validateValueRange(month + 1, 1, 12)) {
+        isValid = false;
+        errorMonth.innerHTML = "Must be a valid month";
+    } else if (day > validDays[month]) {
+        isValid = false;
+        errorMonth.innerHTML = "";
     }
 
     applyInputError(inputMonth, labelMonth, errorMonth, isValid);
@@ -54,10 +73,19 @@ function validateYear() {
     const labelYear = document.getElementById("year-label");
     const errorYear = document.getElementById("year-error");
 
+    let currDate = new Date();
+    let inputDate = new Date(year, month, day);
+
     let isValid = true;
     if (inputYear.value == null || inputYear.value == "") {
-        errorYear.innerHTML = "This field is required";
         isValid = false;
+        errorYear.innerHTML = "This field is required";
+    } else if (currDate < inputDate) {
+        isValid = false;
+        errorYear.innerHTML = "Must be in the past";
+    }  else if (day > validDays[month]) {
+        isValid = false;
+        errorYear.innerHTML = "";
     }
 
     applyInputError(inputYear, labelYear, errorYear, isValid);
