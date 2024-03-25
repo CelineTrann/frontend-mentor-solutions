@@ -156,12 +156,12 @@ p span {
     border: 1px solid var(--light-red);
 }
 
-.text-error {
-    color: var(--light-red);
-}
-
 .error-msg {
     display: none;
+}
+
+.text-error {
+    color: var(--light-red);
 }
 
 /* Desktop Design */
@@ -200,6 +200,10 @@ p span {
         line-height: 0.7rem;
         margin: 10px 0;
         color: transparent;
+    }
+
+    .text-error {
+        color: var(--light-red);
     }
 
     .submit-container {
