@@ -195,10 +195,11 @@ p span {
 
     .error-msg {
         display: block;
-        font-family: "Poppins", Arial, Helvetica, sans-serif;
-        font-size: 0.7rem;
-        line-height: 0.7rem;
-        margin: 10px 0;
+        font-family: "Poppins-Italic", Arial, Helvetica, sans-serif;
+        font-size: 0.5rem;
+        line-height: 0.5rem;
+        
+        margin: 5px 0;
         color: transparent;
     }
 
