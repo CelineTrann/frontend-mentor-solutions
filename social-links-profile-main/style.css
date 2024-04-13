@@ -82,5 +82,11 @@ h3 {
     padding-top: 1rem;
     padding-bottom: 1rem;
     text-align: center;
+    transition: all 0.5s linear;
+}
+
+.link:hover {
+    background-color: var(--green);
+    color: var(--grey);
 }
 
